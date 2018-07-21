@@ -1,0 +1,7 @@
+.idea
+*.class
+.idea/
+out/
+*.gif
+target/
+imgs/
