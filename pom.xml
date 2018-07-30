@@ -34,11 +34,11 @@
     <dependency>
       <groupId>com.github.tiggerbiggo.Prima</groupId>
       <artifactId>PrimaUtils</artifactId>
-      <version>6fa2a47</version>
+      <version>4cfb3daabf</version>
     </dependency><dependency>
       <groupId>com.github.tiggerbiggo.Prima</groupId>
       <artifactId>PrimaPlay</artifactId>
-      <version>6fa2a47</version>
+      <version>4cfb3daabf</version>
     </dependency>
 
     <dependency>

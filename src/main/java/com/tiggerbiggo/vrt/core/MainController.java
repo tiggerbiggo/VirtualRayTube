@@ -3,6 +3,8 @@ package com.tiggerbiggo.vrt.core;
 import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.tiggerbiggo.utils.calculation.Vector2;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -50,11 +52,14 @@ public class MainController implements Initializable {
     {
       double c = 0;
       while(!Thread.interrupted()){
-        for(double i=0; i<Math.PI; i+=0.003){
+        for(double i=0; i<1; i+=0.001){
           scr.plot(
-                  Math.sin(i*Math.sin(c*0.5)) * Math.cos(i*c) * scr.getWidth() * 0.3
-                  ,
-                  Math.cos(i-c) * Math.cos(Math.max(Math.cos(c*0.142), Math.sin(c))) * scr.getHeight() * 0.3
+                  new Vector2(
+                          scr.getWidth() * Math.sin(i + (i*c*Math.sin(c*0.0001*i)))
+                    ,
+                    Math.sin(c*i)*Math.PI//Math.cos(Math.max(Math.cos(i*c),Math.sin(c*i))) * 4 * Math.PI
+                  )
+                  .fromPolar()
           );
         }
         c+=0.003;

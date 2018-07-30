@@ -1,6 +1,8 @@
 package old;
 
 import com.tiggerbiggo.prima.primaplay.graphics.ColorTools;
+import com.tiggerbiggo.utils.calculation.Vector2;
+
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
@@ -76,8 +78,9 @@ public class RayScreen {
     plot((int)Math.ceil(x), (int)Math.ceil(y));
   }
 
+  public void plot(Vector2 vec){plot(vec.X(),vec.Y());}
+
   public synchronized void resize(int _width, int _height){
-    System.out.println("W: " + _width + ", H: " + _height);
     isResizing = true;
     if(_width >= 1 && _height >= 1){
       width = _width;
@@ -96,8 +99,9 @@ public class RayScreen {
         try {
           double percent = (double) numberMap[i][j] / currentMax;
           percent = percent * brightness;
-          img.setRGB(i, j, ColorTools.colorLerp(A, B, percent).getRGB());
-          //img.setRGB(i, j, Color.HSBtoRGB((float)percent,1, (float)percent));
+          percent = Math.min(percent, 1);
+          //mg.setRGB(i, j, ColorTools.colorLerp(A, B, percent).getRGB());
+          img.setRGB(i, j, Color.HSBtoRGB((float)percent,1, (float)percent));
           numberMap[i][j] = Math.max(0, (int) (numberMap[i][j] * darkenFactor));
         }
         catch(ArrayIndexOutOfBoundsException e){}

@@ -10,9 +10,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.github.tiggerbiggo.Prima:PrimaUtils:6fa2a47" level="project" />
+    <orderEntry type="library" name="Maven: com.github.tiggerbiggo.Prima:PrimaUtils:4cfb3daabf" level="project" />
     <orderEntry type="library" name="Maven: com.github.ByRicardoSimoes:TransferGrid:v1.6.0" level="project" />
-    <orderEntry type="library" name="Maven: com.github.tiggerbiggo.Prima:PrimaPlay:6fa2a47" level="project" />
+    <orderEntry type="library" name="Maven: com.github.tiggerbiggo.Prima:PrimaPlay:4cfb3daabf" level="project" />
     <orderEntry type="library" name="Maven: com.github.tiggerbiggo:TransferGrid:d5a3663cbda5036aa44ddf2c490f9fec97aa032f" level="project" />
     <orderEntry type="library" name="Maven: com.github.wendykierp:JTransforms:with-dependencies:3.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-math3:3.5" level="project" />
